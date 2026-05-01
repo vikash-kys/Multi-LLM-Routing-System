@@ -1,0 +1,15 @@
+routing:
+  tier_1:
+    provider: anthropic
+    model_id: claude-haiku-4-5-20251001
+  tier_2:
+    provider: openai
+    model_id: gpt-4o-mini
+  tier_3:
+    provider: openai
+    model_id: gpt-4o
+
+quality:
+  min_judge_score: 4        # out of 5 — scores below this trigger escalation logging
+  auto_escalate: true       # re-run with higher model if quality fails
+  retraining_schedule: weekly
